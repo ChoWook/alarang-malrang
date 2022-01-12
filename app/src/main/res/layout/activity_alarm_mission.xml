@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dark_purple"
+    android:id="@+id/baseLayout">
+
+
+    <!--미션 제목 title id = txt_mission_ring_title-->
+
+    <DigitalClock
+        android:id="@+id/ring_digital_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/darkwhite"
+        android:textSize="55sp"
+        android:layout_marginTop="130dp" />
+
+    <TextView
+        android:id="@+id/txt_mission_ring_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ring_digital_clock"
+        android:textColor="@color/darkwhite"
+        android:textSize="20sp"
+        android:text="EEE, dd MM"/>
+
+
+    <ImageView
+        android:id="@+id/img_ring_mission"
+        android:layout_width="360dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txt_mission_ring_date"
+        android:src="@drawable/mission_photo"
+        android:layout_marginTop="50dp" />
+
+
+    <TextView
+        android:id="@+id/txtbtn_mission_context"
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/img_ring_mission"
+        android:layout_marginTop="0dp"
+        android:textSize="17sp"
+        android:text="@string/ring_mission_context"
+        android:textColor="@color/white" />
+
+
+    <TextView
+        android:id="@+id/txtbtn_do_mission"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtbtn_mission_context"
+        android:layout_marginTop="20dp"
+        android:textSize="35sp"
+        android:text="@string/ring_do_mission"
+        android:textColor="@color/bluegray"
+        android:background="@drawable/bg_btn_radius"/>
+
+
+
+</RelativeLayout>
+

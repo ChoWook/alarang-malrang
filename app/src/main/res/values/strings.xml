@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">alarm</string>
+    <!-- 알람 소리 설정 -->
+    <string name="set_ring">알람 소리 설정</string>
+
+    <string name="basic_ring">기본 알람음</string>
+    <string name="basic_ring_type">시계토끼</string>
+
+    <string name="max_ring">미션 알람음</string>
+    <string name="max_ring_type">바흐의 첼로 연주</string>
+
+    <string name="ring_volume">알람 볼륨</string>
+
+    <string name="vibration_set">알람 진동</string>
+
+    <string name="set_save">저  장</string>
+
+
+    <!-- 3 dot menu -->
+    <string name="SET">설정</string>
+    <string name="APP_INFO">앱 정보</string>
+
+    <!-- 알람 만들기 -->
+
+    <!-- 타이틀&메뉴 -->
+    <string name="cancel">취소</string>
+    <string name="make_alarm">알람 만들기</string>
+    <string name="save">저장</string>
+
+    <!-- 알람 만들기 -->
+    <!-- 약속 제목 -->
+    <string name="promise_title">약속 제목</string>
+    <string name="p_title">친구 만나기</string>
+
+    <!-- 약속 일정 -->
+    <string name="promise_date">약속 일정</string>
+    <string name="p_date">2020.05.02.Mon</string>
+
+
+    <!-- 약속 시간 -->
+    <string name="promise_time">약속 시간</string>
+    <string name="p_time">12:00pm</string>
+
+
+    <!-- 기본 알람 시간 -->
+    <string name="alarm_basic">기본 알람 시간</string>
+    <string name="a_basic">10:30AM</string>
+
+    <!-- 최소 알람 시간 -->
+    <string name="alarm_min">최소 알람 시간</string>
+    <string name="a_min">10:20AM</string>
+
+    <!-- 최대 알람 시간 -->
+    <string name="alarm_max">최대 알람 시간</string>
+    <string name="a_max">10:40AM</string>
+
+
+    <!-- 알람 간격 -->
+    <string name="alarm_gap">알람 간격</string>
+    <string name="a_gap">5분</string>
+
+    <!-- 알람 미션 -->
+    <string name="mission">알람 미션</string>
+
+
+    <!-- 알람 만들기 팝업 -->
+    <string name="basic_set_title">기본 알람 시간 설정</string>
+    <string name="apply">적용</string>
+    <string name="search">교통 시간 검색</string>
+    <string name="add">추가</string>
+    <string name="context_title">머리 말리기</string>
+
+</resources>

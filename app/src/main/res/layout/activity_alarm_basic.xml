@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dark_purple"
+    android:id="@+id/baseLayout">
+
+
+
+
+        <DigitalClock
+            android:id="@+id/ring_digital_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/darkwhite"
+            android:textSize="55sp"
+            android:layout_marginTop="200dp" />
+
+        <TextView
+            android:id="@+id/txt_mission_ring_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ring_digital_clock"
+            android:textColor="@color/darkwhite"
+            android:textSize="20sp"
+            android:text="EEE, dd MM"/>
+
+
+        <TextView
+            android:id="@+id/txt_ring_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txt_mission_ring_date"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:text="약속 제목 둥둥둥"/>
+
+
+        <TextView
+            android:id="@+id/txtbtn_ring_stop"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txt_ring_title"
+            android:layout_marginTop="50dp"
+            android:textSize="35sp"
+            android:text="@string/ring_stop"
+            android:textColor="@color/bluegray"
+            android:background="@drawable/bg_btn_radius"/>
+
+
+
+</RelativeLayout>
+

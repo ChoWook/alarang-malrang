@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="22dp">
+
+        <CheckBox
+            android:id="@+id/context_Check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:id="@+id/context_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_toRightOf="@+id/context_Check"
+            android:textSize="19dp"
+            android:textColor="#524C5E"
+            android:hint="title"
+
+            />
+
+
+        <TextView
+            android:id="@+id/minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="분"
+            android:textSize="19dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#BAB7BF"/>
+
+        <EditText
+            android:id="@+id/context_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/minute"
+            android:textSize="19dp"
+            android:textColor="#BAB7BF"
+            android:background="@null"
+            android:hint="time"
+            android:inputType="number"
+            android:gravity="end"
+            android:layout_marginRight="5dp"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

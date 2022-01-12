@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <!-- 뒤로가기 버튼 & 타이틀 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <!-- 뒤로가기 버튼 -->
+        <ImageButton
+            android:id="@+id/go_home"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:src="@drawable/gohome"
+            android:layout_gravity="start"
+            android:layout_marginLeft="10dp"
+            android:background="#FFF"
+            android:onClick="onGoHomeClicked" />
+
+
+        <!-- 타이틀 - 알람 소리 설정 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@string/set_ring"
+            android:textColor="#524C5E"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+
+    <!-- 알람음 설정 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical">
+
+        <!-- 기본 알람음 설정 -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/basic_Ring"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/basic_ring"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#524C5E"/>
+
+                <TextView
+                    android:id="@+id/basic_Ring_T"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/basic_ring_type"
+                    android:textColor="#524C5E"
+                    android:textSize="20sp"
+                    android:gravity="end"
+                    android:layout_gravity="center_vertical"/>
+            </TableRow>
+
+        </TableLayout>
+
+
+        <!-- 구분선 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/line"
+            />
+
+
+        <!-- 최대 알람음 설정 -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/max_Ring"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/max_ring"
+                    android:textColor="#524C5E"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/max_Ring_T"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/max_ring_type"
+                    android:textColor="#524C5E"
+                    android:textSize="20sp"
+                    android:gravity="end"
+                    android:layout_gravity="center_vertical"/>
+            </TableRow>
+
+        </TableLayout>
+
+
+        <!-- 구분선 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/line"
+            />
+
+
+        <!-- 알람 볼륨 설정 -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/ring_Volume"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/ring_volume"
+                    android:textColor="#524C5E"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical" />
+            </TableRow>
+
+            <TableRow>
+                <SeekBar
+                    android:id="@+id/ring_volume_set"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:layout_marginTop="15dp"
+                    />
+            </TableRow>
+
+        </TableLayout>
+
+
+
+
+        <!-- 구분선 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/line"
+            />
+
+        <!-- 알람 진동 설정 -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/vibration_Set"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/vibration_set"
+                    android:textColor="#524C5E"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical" />
+
+
+                <Switch
+                    android:id="@+id/vibration_Switch"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+
+                    android:gravity="end"
+                    android:layout_gravity="center_vertical"/>
+                <!-- 스위치 꾸미기
+                    android:track="@drawable/switch_track_selector"
+                    android:thumb="@drawable/switch_thumb" -->
+
+            </TableRow>
+
+        </TableLayout>
+
+
+    </LinearLayout>
+
+
+
+    <!-- 저장 버튼 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginBottom="40dp">
+
+
+        <Button
+            android:id="@+id/set_Save"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:background="@drawable/save_button"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+
+            android:text="@string/set_save"
+            android:textColor="#FFF"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+</LinearLayout>

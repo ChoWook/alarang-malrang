@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/popup_Make">
+
+
+
+    <!-- 취소, 적용 -->
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="22dp">
+        <TextView
+            android:id="@+id/popup_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textSize="22dp"
+            android:textColor="#524C5E"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/basic_set_title"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:textColor="#524C5E"/>
+
+        <TextView
+            android:id="@+id/Apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply"
+            android:layout_alignParentRight="true"
+            android:textSize="22dp"
+            android:textColor="#7b74dc"/>
+
+    </RelativeLayout>
+
+
+
+    <!-- 커스텀뷰 부분 1 -->
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="22dp">
+
+        <CheckBox
+            android:id="@+id/context_Check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:id="@+id/context_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/context_title"
+            android:background="@null"
+            android:layout_toRightOf="@+id/context_Check"
+            android:textSize="22dp"
+            android:textColor="#524C5E"
+            />
+
+
+        <TextView
+            android:id="@+id/minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="분"
+            android:textSize="22dp"
+            android:textColor="#BAB7BF"/>
+
+        <EditText
+            android:id="@+id/context_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_toLeftOf="@+id/minute"
+            android:textSize="22dp"
+            android:textColor="#BAB7BF"
+            android:background="@null"/>
+
+
+    </RelativeLayout>
+
+
+
+
+                                <!-- 커스텀뷰 부분 -->
+
+                                <RelativeLayout
+                                    android:layout_width="320dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="22dp">
+
+                                    <CheckBox
+                                        android:id="@+id/context_Check"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        />
+
+                                    <EditText
+                                        android:id="@+id/context_Title"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/context_title"
+                                        android:background="@null"
+                                        android:layout_toRightOf="@+id/context_Check"
+                                        android:textSize="22dp"
+                                        android:textColor="#524C5E"
+                                        />
+
+
+                                    <TextView
+                                        android:id="@+id/minute"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:text="분"
+                                        android:textSize="22dp"
+                                        android:textColor="#BAB7BF"/>
+
+                                    <EditText
+                                        android:id="@+id/context_Time"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1"
+                                        android:layout_toLeftOf="@+id/minute"
+                                        android:textSize="22dp"
+                                        android:textColor="#BAB7BF"
+                                        android:background="@null"/>
+
+
+                                </RelativeLayout>
+
+
+
+    <!-- 검색, 추가 -->
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageButton
+            android:id="@+id/Search"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search"
+            android:onClick="onSearchClicked" />
+
+        <TextView
+            android:id="@+id/Search_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search"
+            android:layout_toRightOf="@+id/Search"
+            android:layout_marginLeft="10dp"
+            android:textSize="22dp"
+            android:textColor="#524C5E"
+            android:onClick="onSearchClicked"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="22dp"
+            android:textColor="#7b74dc"/>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

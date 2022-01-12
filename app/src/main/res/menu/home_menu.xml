@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_menu">
+
+    <item
+        android:id="@+id/set"
+        android:icon="@drawable/set_24dp"
+        android:title="@string/SET" />
+
+    <item
+        android:id="@+id/app_info"
+        android:title="@string/APP_INFO"
+        android:icon="@drawable/set_24dp"/>
+
+</menu>

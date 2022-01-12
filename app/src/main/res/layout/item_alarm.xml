@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    >
+
+        <ImageView
+            android:id="@+id/small_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/ic_small_clock" />
+
+        <TextView
+            android:id="@+id/txt_alarm_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_toRightOf="@+id/small_clock"
+            android:textSize="28dp"
+            android:textColor="@color/bluegray"
+            android:text="12:02"
+            android:layout_marginRight="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/txt_alarm_am_pm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txt_alarm_time"
+            android:layout_marginTop="13dp"
+            android:text="AM"
+            android:textColor="@color/bluegray"
+            android:textSize="13dp"/>
+
+
+        <TextView
+            android:id="@+id/txt_alarm_context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_alarm_time"
+            android:layout_marginLeft="60dp"
+            android:text="@string/alarm_context"
+            android:textColor="@color/lightgray"
+            android:textSize="13dp"/>
+
+
+        <Switch
+            android:id="@+id/switch_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="end"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center_vertical"/>
+
+</RelativeLayout>

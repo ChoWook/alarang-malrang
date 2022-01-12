@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <!-- 타이틀&메뉴 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <!-- 취소 버튼 -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:id="@+id/go_home"
+            android:layout_gravity="start"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="@string/cancel"
+            android:textColor="#7b74dc"
+            android:textSize="20sp"
+            android:onClick="onGoHomeClicked" />
+
+        <!-- 타이틀 - 알람 만들기 -->
+        <TextView
+            android:id="@+id/make_Alarm"
+            android:layout_width="270dp"
+            android:layout_height="80dp"
+            android:text="@string/make_alarm"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#524C5E"/>
+
+        <!-- 저장 버튼 -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:id="@+id/make_save"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:text="@string/save"
+            android:textColor="#7b74dc"
+            android:textSize="20sp"
+            android:onClick="onGoHomeClicked" />
+
+    </LinearLayout>
+
+
+    <!-- 알람 만들기 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#F5F4FD"
+        android:orientation="vertical">
+
+
+        <!-- 약속 제목 -->
+
+        <View
+            android:layout_width="380dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/title_corner"/>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <TableRow>
+                <TextView
+                    android:id="@+id/promise_Title"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:text="@string/promise_title"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:textColor="#524C5E"/>
+
+                <EditText
+                    android:id="@+id/p_Title"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/p_title"
+                    android:textColor="#524C5E"
+                    android:textSize="20sp"
+                    android:gravity="end"
+                    android:background="@null"/>
+            </TableRow>
+        </TableLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F4FD"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+
+            <!-- 약속 일정 -->
+            <TableRow
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:id="@+id/promise_Date"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+
+                    android:text="@string/promise_date"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#524C5E"/>
+
+                <TextView
+                    android:id="@+id/p_Date"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/p_date"
+                    android:textColor="#524C5E"
+                    android:textSize="20sp"
+                    android:gravity="end"
+                    android:layout_gravity="center"/>
+            </TableRow>
+
+
+            <!-- 약속 시간 -->
+            <TableRow
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:id="@+id/promise_Time"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:text="@string/promise_time"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#524C5E"/>
+
+                <TextView
+                    android:id="@+id/p_Time"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:text="@string/p_time"
+                    android:textColor="#524C5E"
+                    android:textSize="20sp"
+                    android:gravity="end" />
+            </TableRow>
+
+
+            <!-- 기본 알람 시간 -->
+            <TableRow
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:id="@+id/alarm_Basic"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:text="@string/alarm_basic"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#524C5E"/>
+
+                <ImageButton
+                    android:id="@+id/popup_set"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/pencil_small"/>
+
+                <TextView
+                    android:id="@+id/a_Basic"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:text="@string/a_basic"
+                    android:textColor="#524C5E"
+                    android:textSize="20sp"
+                    android:gravity="end"
+                    android:layout_gravity="center_vertical"/>
+            </TableRow>
+
+
+
+            <!-- 최소 알람 시간 -->
+            <TableRow
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:id="@+id/alarm_Min"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:text="@string/alarm_min"
+                    android:textSize="17sp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#524C5E"/>
+
+                <TextView
+                    android:id="@+id/a_Min"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:text="@string/a_min"
+                    android:textColor="#524C5E"
+                    android:textSize="17sp"
+                    android:gravity="end"
+                    android:layout_gravity="center_vertical"/>
+            </TableRow>
+
+
+            <!-- 최대 알람 시간 -->
+            <TableRow
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:id="@+id/alarm_Max"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:text="@string/alarm_max"
+                    android:textSize="17sp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#524C5E"/>
+
+                <TextView
+                    android:id="@+id/a_Max"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:text="@string/a_max"
+                    android:textColor="#524C5E"
+                    android:textSize="17sp"
+                    android:gravity="end"
+                    android:layout_gravity="center_vertical"/>
+            </TableRow>
+
+
+            <!-- 알람 간격 -->
+            <TableRow
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:id="@+id/alarm_Gap"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:text="@string/alarm_gap"
+                    android:textSize="17sp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#524C5E"/>
+
+                <TextView
+                    android:id="@+id/a_Gap"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:text="@string/a_gap"
+                    android:textColor="#524C5E"
+                    android:textSize="17sp"
+                    android:gravity="end"
+                    android:layout_gravity="center_vertical"/>
+            </TableRow>
+
+        </TableLayout>
+
+
+
+
+
+
+
+        <!-- 구분선 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/line"
+            />
+
+
+
+
+        <!-- 알람 미션 -->
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TableRow
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:id="@+id/Mission"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/mission"
+                    android:textColor="#524C5E"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical" />
+            </TableRow>
+
+
+        </TableLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mission_photo"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>
